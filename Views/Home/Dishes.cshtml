@@ -29,7 +29,8 @@
       @foreach (Dish dish in Model )
     {
             <td>@dish.Name</td>
-            <td>@dish.Creator.FirstName</td>
+            <!--this line is broken -->
+            <td>@dish.Creator</td>
             <td>@dish.Tastiness</td>
             <td>@dish.Calories</td>
     }
