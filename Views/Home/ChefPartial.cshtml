@@ -1,0 +1,56 @@
+@using ChefDishes
+@model Dish
+
+
+    <h1>Add a new Dish!</h1>
+    <a href="/">Home</a>
+    <form asp-action="CreateDish" asp-controller="Home" method="POST">
+        <span asp-validation-for="Chef"></span>
+        <label asp-for="Chef"></label><br>
+        <select asp-for="Chef">
+        <partial name="ChefPartial"/>
+        </select> <br><br>
+
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label><br>
+        <input asp-for="Name"> <br><br>
+
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"></label><br>
+        <input asp-for="Calories"> <br><br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label><br>
+        <select asp-for="Tastiness">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select> <br><br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label><br>
+        <textarea asp-for="Description"></textarea> <br><br>
+
+        <input type="submit" value="Add Dish">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

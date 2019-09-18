@@ -1,0 +1,43 @@
+@using ChefDishes;
+@model List<Dish>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1> <a href="new/chef">Chefs</a> | Dishes</h1>
+      </div>
+      <a href="new/dish">Add a Dish</a>
+      
+    </div>
+            
+    <div class="row">
+        
+    <h3>Yum take a look at our tasty Dishes!</h3>
+    </div>
+    <div class="row">
+      <table class="table-striped table-bordered">
+          <tr >
+            <th>Name</th>
+            <th>Chef</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+  
+        <thead>
+        <tbody>
+          <tr>
+      @foreach (Dish dish in Model )
+    {
+            <td>@dish.Name</td>
+            <td>@dish.Creator.FirstName</td>
+            <td>@dish.Tastiness</td>
+            <td>@dish.Calories</td>
+    }
+          </tr>
+        </tbody>
+  
+      </table>
+  
+  
+    </div>
+  </div>
